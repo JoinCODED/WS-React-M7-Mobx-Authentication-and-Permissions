@@ -22,3 +22,50 @@
    ```
 
 3. Try logging in and check your console. Yaaay! We got our token!
+
+But now what can we do with the token? We need to decode it!
+
+4. Install `jwt-decode` which is a library that can decode tokens.
+
+   ```javascript
+   $ yarn add jwt-decode
+   ```
+
+5. Import `decode` from `jwt-decode` which is a function that takes a token as an argument and returns the decoded object.
+
+   ```javascript
+   import decode from "jwt-decode";
+   ```
+
+6. Pass the token in `res.data` to `jwt-decode` and let's console log it.
+
+   ```javascript
+   try {
+     const res = await instance.post("/login", userData);
+     console.log(decode(res.data.token));
+   }
+   ```
+
+7. But what will we do now with this decoded token? We'll create a new property in our store called `user`. `user`'s initial value is `null`, which basically mean that no user is logged in.
+
+   ```javascript
+   class AuthStore {
+     user = null;
+   ```
+
+8. Don't forget to make it `observable` in `decorate`.
+
+   ```javascript
+   decorate(AuthStore, {
+     user: observable,
+   });
+   ```
+
+9. In `signin`, we will save the decoded token in `this.user`.
+
+```javascript
+try {
+  const res = await instance.post("/login", userData);
+  this.user = decode(res.data.token);
+}
+```
