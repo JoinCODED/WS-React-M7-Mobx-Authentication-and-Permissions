@@ -40,7 +40,7 @@ What's cool about `axios` is that we can set the token when we first log in, and
 
    ```javascript
    try {
-     const res = await instance.post("/signin", userData);
+     const res = await instance.post("/signup", userData);
      this.setUser(res.data.token);
    }
    ```
