@@ -2,7 +2,7 @@ To make an `axios` request to an endpoint that requires the user to be logged in
 
 What's cool about `axios` is that we can set the token when we first log in, and it'll send it along with any request that requires a token.
 
-1. In `authStore`'s `signin` method, after receiving the token in the response, we will save it in our `axios` `instance`.
+1. In `authStore`'s `signin` method, after receiving the token in the response, we will save it in our `axios`'s `instance`.
 
    ```javascript
    try {

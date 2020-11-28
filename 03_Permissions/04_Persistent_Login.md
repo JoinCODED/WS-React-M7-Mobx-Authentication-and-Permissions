@@ -37,7 +37,7 @@ checkForToken = () => {
   const token = localStorage.getItem("myToken");
   if (token) {
     const currentTime = Date.now() / 1000;
-    const user = jwt_decode(token);
+    const user = decode(token);
     if (user.exp >= currentTime) {
       this.setUser(token);
     } else {
