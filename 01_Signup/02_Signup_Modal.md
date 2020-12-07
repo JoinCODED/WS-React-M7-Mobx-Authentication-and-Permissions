@@ -11,18 +11,18 @@
    const openModal = () => setIsOpen(true);
    ```
 
-3. Create a signup modal component, `SignupModal.js` and set it up. This component receives `isOpen` and `closeModal` as a `prop`.
+3. Create a signup modal component, `Signup.js` and set it up. This component receives `isOpen` and `closeModal` as a `prop`.
 
    ```javascript
-   const SignupModal = ({ isOpen, closeModal }) => {
+   const Signup = ({ isOpen, closeModal }) => {
    ```
 
-4. In `SignupButton`, render `SignupModal` and pass it `isOpen` and `closeModal` as `props`.
+4. In `SignupButton`, render `Signup` and pass it `isOpen` and `closeModal` as `props`.
 
    ```javascript
    <>
      <AuthButtonStyled>Sign up</AuthButtonStyled>
-     <SignupModal isOpen={isOpen} closeModal={closeModal} />
+     <Signup isOpen={isOpen} closeModal={closeModal} />
    </>
    ```
 

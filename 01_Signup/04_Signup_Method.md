@@ -1,12 +1,14 @@
 1. Create a new store that will be responsible for authentication. Let's call it `authStore.js`.
 
    ```javascript
-   import { decorate, observable } from "mobx";
+   import { observable, makeAutoObservable } from "mobx";
    import axios from "axios";
 
-   class AuthStore {}
-
-   decorate(AuthStore, {});
+   class AuthStore {
+     constructor() {
+       makeAutoObservable(this);
+     }
+   }
 
    const authStore = new AuthStore();
 
