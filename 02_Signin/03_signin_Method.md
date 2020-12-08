@@ -53,15 +53,7 @@ But now what can we do with the token? We need to decode it!
      user = null;
    ```
 
-8. Don't forget to make it `observable` in `decorate`.
-
-   ```javascript
-   decorate(AuthStore, {
-     user: observable,
-   });
-   ```
-
-9. In `signin`, we will save the decoded token in `this.user`.
+8. In `signin`, we will save the decoded token in `this.user`.
 
 ```javascript
 try {
