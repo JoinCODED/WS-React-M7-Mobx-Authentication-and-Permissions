@@ -41,7 +41,7 @@ But now what can we do with the token? We need to decode it!
 
    ```javascript
    try {
-     const res = await instance.post("/login", userData);
+     const res = await instance.post("/signin", userData);
      console.log(decode(res.data.token));
    }
    ```
@@ -57,7 +57,7 @@ But now what can we do with the token? We need to decode it!
 
 ```javascript
 try {
-  const res = await instance.post("/login", userData);
+  const res = await instance.post("/signin", userData);
   this.user = decode(res.data.token);
 }
 ```
