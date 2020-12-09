@@ -8,7 +8,7 @@
 
    ```javascript
    <>
-     <UsernameStyled>7yak Allah, {authStore.user.username}</UsernameStyled>
+     <UsernameStyled>Hello, {authStore.user.username}</UsernameStyled>
      <FiLogOut onClick={authStore.signout} size="2em" color="red" />
    </>
    ```

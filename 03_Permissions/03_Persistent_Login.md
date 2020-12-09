@@ -36,7 +36,7 @@ To keep the user logged in we need to save the token in the local storage.
 checkForToken = () => {
   const token = localStorage.getItem("myToken");
   if (token) {
-    const currentTime = Date.now() / 1000;
+    const currentTime = Date.now();
     const user = decode(token);
     if (user.exp >= currentTime) {
       this.setUser(token);
