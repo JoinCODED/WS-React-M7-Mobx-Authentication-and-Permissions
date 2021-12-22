@@ -28,7 +28,7 @@ But now what can we do with the token? We need to decode it!
 4. Install `jwt-decode` which is a library that can decode tokens.
 
    ```javascript
-   $ yarn add jwt-decode
+   $ npm install jwt-decode
    ```
 
 5. Import `decode` from `jwt-decode` which is a function that takes a token as an argument and returns the decoded object.
